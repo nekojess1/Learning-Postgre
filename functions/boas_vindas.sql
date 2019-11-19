@@ -15,3 +15,4 @@ END;
 $$ LANGUAGE plpgsql;
 
 
+-- A tabela usada nesas função foi a users_table, que se encontra em github.com/nekojess1/Learning-PostgreSQL/tree/master/tables
