@@ -45,6 +45,23 @@ Observações: Poderá ocorrer diversas ações, sendo alguns exemplos: rename, 
       ALTER TABLE table_name
       ADD COLUMN column_name data type;
       
+##### INNER JOIN: Faz a união entre os dados das tabelas selecionadas.
+###### Estrutura de um INNER JOIN:
+      SELECT * 
+      FROM table_name
+      INNER JOIN table_name2 on (condition)
+
+###### Exemplo:
+      CREATE VIEW validade_e_produto as
+      SELECT descricao, quantidade, valor,
+      (valor*quantidade) as valor_total, 
+      validade, categoria_produto.nome as
+      categorias, ehvalido(produtos.id)      -- Esse ehvalido foi uma função criada por mim
+      FROM produtos 
+      INNER JOIN categoria_produto 
+      ON produtos.categoria_id = categoria_produto.id;
+      
+      
 ##### CREATE FUNCTION: Cria uma função, que pode automatizar diversas ações.
 ###### Estrutura de um CREATE FUNCTION:
       CREATE FUNCTION nome(param1 datatype)
