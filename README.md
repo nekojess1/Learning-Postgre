@@ -96,3 +96,7 @@ Observações: Poderá ocorrer diversas ações, sendo alguns exemplos: rename, 
       FOR EACH ROW	          -- Vai executar para cada linha dentro da tabela
       EXECUTE 
       PROCEDURE salvaexcluido();  -- Executará a função salvaexcluido()
+      
+      
+      
+#### Extra: Utilizem Jasper Reports para gerar relatórios sobre as tabelas do seu banco. :) 
