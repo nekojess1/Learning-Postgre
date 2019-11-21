@@ -61,3 +61,21 @@ Observações: Poderá ocorrer diversas ações, sendo alguns exemplos: rename, 
       AS SELECT *
       FROM table_name
       WHERE column_name = 'name';
+      
+##### CREATE TRIGGER: Uma trigger será associada com um tabela específica ou view, e vai executar uma específica função quando determinado evento acontecer.
+###### Estrutura de um CREATE TRIGGER:
+      CREATE [ CONSTRAINT ] TRIGGER name { BEFORE | AFTER | INSTEAD OF } { event [ OR ... ] }
+      ON table
+      [ FROM referenced_table_name ]
+      [ NOT DEFERRABLE | [ DEFERRABLE ] { INITIALLY IMMEDIATE | INITIALLY DEFERRED } ]
+      [ FOR [ EACH ] { ROW | STATEMENT } ]
+      [ WHEN ( condition ) ]
+      EXECUTE PROCEDURE function_name ( arguments )
+      
+###### Exemplo:
+      CREATE TRIGGER exclusao_cliente
+      AFTER DELETE    		    -- Será executada depois de deletar
+      on cliente      		    -- Na tabela cliente             
+      FOR EACH ROW	          -- Vai executar para cada linha dentro da tabela
+      EXECUTE 
+      PROCEDURE salvaexcluido();  -- Executará a função salvaexcluido()
