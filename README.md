@@ -45,11 +45,11 @@ Observações: Poderá ocorrer diversas ações, sendo alguns exemplos: rename, 
       ALTER TABLE table_name
       ADD COLUMN column_name data type;
       
-##### INNER JOIN: Faz a união entre os dados das tabelas selecionadas.
-###### Estrutura de um INNER JOIN:
+##### JOIN: Faz a união entre os dados das tabelas selecionadas.
+###### Estrutura de um JOIN:
       SELECT * 
       FROM table_name
-      INNER JOIN table_name2 on (condition)
+      JOIN table_name2 on (condition)
 
 ###### Exemplo:
       CREATE VIEW validade_e_produto as
